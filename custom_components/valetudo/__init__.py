@@ -11,7 +11,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    if entry.data.get("type") == "icons":
+    if entry.data.get("entry_type") == "icons":
         await async_setup_icons(hass) 
         
     # else tbd
